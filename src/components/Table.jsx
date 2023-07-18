@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Table = () => {
-  const warehouseData = useSelector((store) => store.app.data);
+  const warehouseData = useSelector((store) => store.app.filteredData);
   console.log(warehouseData);
   return (
     <table className="list-container">
@@ -19,9 +19,11 @@ const Table = () => {
         {warehouseData.map((data) => {
           return (
             <tr className="data-row" key={data.id}>
-              <Link to="warehouse">
-                <td>{data?.name}</td>
-              </Link>
+              <td>
+                {" "}
+                <Link to="warehouse">{data?.name} </Link>
+              </td>
+
               <td>{data?.city}</td>
               <td>{data?.cluster}</td>
               <td>{data?.space_available}</td>

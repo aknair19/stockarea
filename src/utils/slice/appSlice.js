@@ -4,7 +4,7 @@ const appSlice = createSlice({
   name: "app",
   initialState: {
     data: WarehouseData,
-    filteredData: [],
+    filteredData: WarehouseData,
   },
   reducers: {
     setName: (state, action) => (action.payload = state.name),
@@ -14,5 +14,5 @@ const appSlice = createSlice({
   },
 });
 
-export const { setName } = appSlice.actions;
+export const { setName, getDataByName } = appSlice.actions;
 export default appSlice.reducer;
