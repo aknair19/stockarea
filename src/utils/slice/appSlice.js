@@ -1,12 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import WarehouseData from "../../constants/warehouse.json";
 const appSlice = createSlice({
   name: "app",
   initialState: {
-    name: "abhishek nair, redux setup is done",
+    data: WarehouseData,
+    filteredData: [],
   },
   reducers: {
     setName: (state, action) => (action.payload = state.name),
+    getDataByName: (state, action) => {
+      state.filteredData = action.payload;
+    },
   },
 });
 

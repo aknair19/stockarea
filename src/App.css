@@ -1,0 +1,52 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right bottom, rgb(241, 201, 21), blueviolet);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 500px;
+
+  overflow-y: auto;
+  box-shadow: 1px 1px 20px white;
+  border-radius: 10px;
+}
+
+.container-header {
+  width: 100%;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(189, 101, 189);
+}
+
+.container-header input {
+  background-color: rgb(189, 101, 189);
+  padding: 3px 10px;
+
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+.container-header input ::placeholder {
+  padding: 3px 10px;
+}
+.container-header button {
+  background-color: rgb(189, 101, 189);
+  border: none;
+  padding: 2px;
+  border-bottom: 2px solid black;
+}
+
+.list-container {
+  width: 100%;
+}
+
+.data-row {
+  text-align: center;
+}
