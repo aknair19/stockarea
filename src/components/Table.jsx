@@ -19,12 +19,11 @@ const Table = () => {
         {warehouseData.map((data) => {
           return (
             <tr className="data-row" key={data.id}>
-              <td>
-                {" "}
+              <td className="data-row-name">
                 <Link to="warehouse">{data?.name} </Link>
               </td>
 
-              <td>{data?.city}</td>
+              <td >{data?.city}</td>
               <td>{data?.cluster}</td>
               <td>{data?.space_available}</td>
             </tr>

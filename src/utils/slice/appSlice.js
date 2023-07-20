@@ -11,8 +11,15 @@ const appSlice = createSlice({
     getDataByName: (state, action) => {
       state.filteredData = action.payload;
     },
+    getDataByCity: (state, action) => {
+      state.filteredData = action.payload;
+    },
+    getDataByCluster: (state, action) => {
+      state.filteredData = action.payload;
+    },
   },
 });
 
-export const { setName, getDataByName } = appSlice.actions;
+export const { setName, getDataByName, getDataByCity, getDataByCluster } =
+  appSlice.actions;
 export default appSlice.reducer;
