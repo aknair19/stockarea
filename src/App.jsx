@@ -13,7 +13,7 @@ function App() {
       children: [],
     },
     {
-      path: "warehouse",
+      path: "/warehouse/:warehousename",
       element: <Warehouse />,
     },
   ]);

@@ -35,7 +35,7 @@ const Header = () => {
   const uniqueCluster = [...new Set(clusters)];
   const uniqueCities = [...new Set(cities)];
 
-  console.log(cities);
+
   useEffect(() => {
     handleInputChange();
   }, [inputValue]);
@@ -43,7 +43,7 @@ const Header = () => {
   const handleCityChange = () => {
     const result = warehouseList.filter((list) => list.city.includes(city));
     dispatch(getDataByCity(result));
-    console.log(result);
+   
   };
 
   const handleClusterChange = () => {

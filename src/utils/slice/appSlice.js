@@ -3,8 +3,8 @@ import WarehouseData from "../../constants/warehouse.json";
 const appSlice = createSlice({
   name: "app",
   initialState: {
-    data: WarehouseData,
-    filteredData: WarehouseData,
+    data: [...WarehouseData],
+    filteredData: [...WarehouseData],
   },
   reducers: {
     setName: (state, action) => (action.payload = state.name),
@@ -17,9 +17,17 @@ const appSlice = createSlice({
     getDataByCluster: (state, action) => {
       state.filteredData = action.payload;
     },
+    updateData: (state, action) => {
+      state.data = action.payload;
+    },
   },
 });
 
-export const { setName, getDataByName, getDataByCity, getDataByCluster } =
-  appSlice.actions;
+export const {
+  setName,
+  getDataByName,
+  getDataByCity,
+  getDataByCluster,
+  updateData,
+} = appSlice.actions;
 export default appSlice.reducer;

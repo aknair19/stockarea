@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Table = () => {
   const warehouseData = useSelector((store) => store.app.filteredData);
-  console.log(warehouseData);
+
   return (
     <table className="list-container">
       <thead>
@@ -20,7 +20,7 @@ const Table = () => {
           return (
             <tr className="data-row" key={data.id}>
               <td className="data-row-name">
-                <Link to="warehouse">{data?.name} </Link>
+                <Link to={`warehouse/${data.code}`}>{data?.name} </Link>
               </td>
 
               <td >{data?.city}</td>
